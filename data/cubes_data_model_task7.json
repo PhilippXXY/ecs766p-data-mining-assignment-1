@@ -1,0 +1,62 @@
+{
+  "dimensions": [
+    {
+      "name": "region",
+      "label": "Region",
+      "levels": [
+        {
+          "name": "region",
+          "label": "Region",
+          "attributes": ["region"]
+        }
+      ]
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "levels": [
+        {
+          "name": "age",
+          "label": "Age",
+          "attributes": ["age"]
+        }
+      ]
+    },
+    {
+      "name": "online_shopper",
+      "label": "Online Shopper",
+      "levels": [
+        {
+          "name": "online_shopper",
+          "label": "Online Shopper",
+          "attributes": ["online_shopper"]
+        }
+      ]
+    }
+  ],
+  "cubes": [
+    {
+      "name": "country_income",
+      "label": "Country Income",
+      "dimensions": ["region", "age", "online_shopper"],
+      "measures": [{ "name": "income", "label": "Income" }],
+      "aggregates": [
+        { "name": "income_total", "function": "sum", "measure": "income" },
+        { "name": "income_avg", "function": "avg", "measure": "income" },
+        { "name": "income_min", "function": "min", "measure": "income" },
+        { "name": "income_max", "function": "max", "measure": "income" },
+        { "name": "record_count", "function": "count" }
+      ],
+      "mappings": {
+        "region.region": "region",
+        "age.age": "age",
+        "online_shopper.online_shopper": "online_shopper",
+        "income": "income"
+      },
+      "info": {
+        "source_table": "country_income",
+        "notes": "Model for data/country-income.csv: columns Region, Age, Income, Online Shopper"
+      }
+    }
+  ]
+}
