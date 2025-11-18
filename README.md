@@ -2,6 +2,8 @@
 
 This repository contains solutions to Assignment 1 for the ECS766P Data Mining course at Queen Mary University of London.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PhilippXXY/ecs766p-data-mining-assignment-1/HEAD)
+
 ## Assignment Overview
 
 This assignment covers fundamental data mining concepts and techniques including:
